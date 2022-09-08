@@ -36,7 +36,7 @@ This repo describes the configuration of various Cisco VPN solutions
 # ip access-list extended [ACCESS-LIST-NAME]
    permit ip 10.10.10.0 0.0.0.255 20.20.20.0 0.0.0.255
 
-# crypto ipsec transform-set [Transform-Set-Name] [combination of individual IPSec transform]
+# crypto ipsec transform-set [Transform-Set-Name] [combination of individual IPSec transform-set]
 ```
 
 #### Create crypto
