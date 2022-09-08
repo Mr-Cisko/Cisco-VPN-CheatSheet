@@ -25,7 +25,7 @@ This repo describes the configuration of various Cisco various VPN solutions
 #### CA Server 
 
 - Define the domain name
-ip domain-name `domain.name`
+ `ip domain-name domain.name`
 - generate an exportable RSA Key
 crypto key generate rsa modulus 1024 label `KEY_NAME` exportable
 
