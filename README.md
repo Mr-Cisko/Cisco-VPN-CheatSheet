@@ -4,7 +4,7 @@ This repo describes the configuration of various Cisco various VPN solutions
 
 ## Quick navigation
 
-[test](CONTRIBUTING)
+[test](readme.md#CONTRIBUTING)
 
 ## VPN Site To Site (Certificate-based authentication)
 
