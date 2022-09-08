@@ -32,7 +32,7 @@ This repo describes the configuration of various Cisco VPN solutions
 
 ```
 # ip access-list extended [ACCESS-LIST-NAME]
-   permit ip 10.10.10.0 0.0.0.255 20.20.20.0 0.0.0.255
+   permit ip [Local-Network] [Wildcard-Mask] [Remote-Network] [Wildcard-Mask]
 ```
 #### Create a Transform-set
 ```
