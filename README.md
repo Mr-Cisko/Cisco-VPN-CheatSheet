@@ -19,8 +19,8 @@ This repo describes the configuration of various Cisco VPN solutions
 ### Phase 1 configuration
 ```
 crypto isakmp policy 1
-encr [encryption-Algorithm]
-hash [Hash-Algorithm]
+   encr [encryption-Algorithm]
+   hash [Hash-Algorithm]
 authentication pre-share
 group [Deffie-Hellman-Group]
 lifetime [Seconds]
