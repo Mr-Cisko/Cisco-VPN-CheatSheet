@@ -1,6 +1,6 @@
 # Cisco-VPN-cheatSheet
 
-This repo describes the configuration of various Cisco various VPN solutions
+This repo describes the configuration of various Cisco VPN solutions
 
 ## Quick navigation
 
@@ -16,6 +16,17 @@ This repo describes the configuration of various Cisco various VPN solutions
 
 
 ## VPN Site To Site Preshared Key Auth
+### Phase 1 configuration
+```
+crypto isakmp policy 1
+encr [encryption-Algorithm]
+hash [Hash-Algorithm]
+authentication pre-share
+group [Deffie-Hellman-Group]
+lifetime [Seconds]
+```
+
+
 ## VPN Site To Site Certificate-Based
 
 ### Prerequesite
