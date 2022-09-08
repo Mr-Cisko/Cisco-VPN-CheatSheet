@@ -24,23 +24,21 @@ This repo describes the configuration of various Cisco VPN solutions
    authentication pre-share
    group [Deffie-Hellman-Group]
    lifetime [Seconds]
-
 # crypto isakmp key [Preshared-Key] address [Remote-PEER-IP]
-   
 ```
 ### Phase 2 configuration
 
-#### Define interesting trafic (identify the trafic that should go through the VPN)
+#### Define interesting trafic (trafic that should go through the VPN)
 
 ```
 # ip access-list extended [ACCESS-LIST-NAME]
    permit ip 10.10.10.0 0.0.0.255 20.20.20.0 0.0.0.255
-
+```
+#### Create a Transform-set
+```
 # crypto ipsec transform-set [Transform-Set-Name] [combination of individual IPSec transform-set]
 ```
-
-#### Create crypto
-
+#### Create a crypto-map
 ```
 crypto map CMAP 10 [CRYPTO-MAP-NAME]
     set peer [REMOTE-PEER-IP]
