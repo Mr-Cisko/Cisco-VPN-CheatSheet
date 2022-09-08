@@ -15,7 +15,7 @@ This repo describes the configuration of various Cisco VPN solutions
 
 
 
-## 1. VPN Site To Site Preshared Key Auth
+## VPN Site To Site Preshared Key Auth
 ### Phase 1 configuration
 ```
 # crypto isakmp policy 1
@@ -54,7 +54,7 @@ interface [INTERFACE-ID]
    crypto map CMAP [CRYPTO-MAP-NAME]
 ```
 
-## 2. VPN Site To Site Certificate-Based
+## VPN Site To Site Certificate-Based
 
 ### Prerequesite
 
