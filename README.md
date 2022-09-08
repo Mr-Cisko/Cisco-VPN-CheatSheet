@@ -15,19 +15,46 @@ This repo describes the configuration of various Cisco VPN solutions
 
 
 
-## VPN Site To Site Preshared Key Auth
+## 1. VPN Site To Site Preshared Key Auth
 ### Phase 1 configuration
 ```
-crypto isakmp policy 1
+# crypto isakmp policy 1
    encr [encryption-Algorithm]
    hash [Hash-Algorithm]
-authentication pre-share
-group [Deffie-Hellman-Group]
-lifetime [Seconds]
+   authentication pre-share
+   group [Deffie-Hellman-Group]
+   lifetime [Seconds]
+
+# crypto isakmp key [Preshared-Key] address [Remote-PEER-IP]
+   
+```
+### Phase 2 configuration
+
+#### Define interesting trafic (identify the trafic that should go through the VPN)
+
+```
+# ip access-list extended [ACCESS-LIST-NAME]
+   permit ip 10.10.10.0 0.0.0.255 20.20.20.0 0.0.0.255
+
+# crypto ipsec transform-set [Transform-Set-Name] [combination of individual IPSec transform]
 ```
 
+#### Create crypto
 
-## VPN Site To Site Certificate-Based
+```
+crypto map CMAP 10 [CRYPTO-MAP-NAME]
+    set peer [REMOTE-PEER-IP]
+    set transform-set [Transform-Set-Name]
+    match address [ACCESS-LIST-NAME]
+```
+#### Apply the Created crypto Map to the interface used for the VPN
+
+```
+interface [INTERFACE-ID]
+   crypto map CMAP [CRYPTO-MAP-NAME]
+```
+
+## 2. VPN Site To Site Certificate-Based
 
 ### Prerequesite
 
