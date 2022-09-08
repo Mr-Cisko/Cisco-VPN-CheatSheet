@@ -40,10 +40,10 @@ This repo describes the configuration of various Cisco VPN solutions
 ```
 #### Create a crypto-map
 ```
-crypto map CMAP 10 `[CRYPTO-MAP-NAME]`
-    set peer `[REMOTE-PEER-IP]`
-    set transform-set `[Transform-Set-Name]`
-    match address `[ACCESS-LIST-NAME]`
+crypto map CMAP 10 [CRYPTO-MAP-NAME]
+    set peer [REMOTE-PEER-IP]
+    set transform-set [Transform-Set-Name]
+    match address [ACCESS-LIST-NAME]
 ```
 #### Apply the Created crypto Map to the interface used for the VPN
 
