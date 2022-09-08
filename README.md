@@ -4,7 +4,7 @@ This repo describes the configuration of various Cisco various VPN solutions
 
 ## Quick navigation
 
-[test](README.md#test)
+[VPN Site To Site Preshared Key Auth](README.md#VPN-Site-To-Site-Preshared-Key-Auth)
 
 [VPN Site To Site Preshared Key Auth](README.md#VPN Site To Site Preshared Key Auth)
 - [VPN Site To Site Certificate-Based](README.md#VPN Site To Site Certificate-Based)
