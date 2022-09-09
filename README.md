@@ -50,7 +50,7 @@ crypto map CMAP 10 [CRYPTO-MAP-NAME]
 
 ```
 interface [INTERFACE-ID]
-   crypto map CMAP [CRYPTO-MAP-NAME]
+   crypto map [CRYPTO-MAP-NAME]
 ```
 
 ## VPN Site To Site Certificate-Based
