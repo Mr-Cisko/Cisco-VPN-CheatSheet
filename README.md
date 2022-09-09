@@ -1,4 +1,4 @@
-# Cisco-VPN-cheatSheet
+# Cisco-VPN-CheatSheet
 
 This repo describes the configuration of various Cisco VPN solutions
 ![Screenshot](VPN-Img.png)
